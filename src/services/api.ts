@@ -45,7 +45,7 @@ export async function fetchLivePrices(
   params.append('sort[Arrival_Date]', 'desc');
 
   try {
-    const response = await fetch(`/api/data/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?${params.toString()}`);
+    const response = await fetch(`https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24?${params.toString()}`);
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
     }
